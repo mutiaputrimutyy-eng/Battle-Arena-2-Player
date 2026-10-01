@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Arena 2 Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+
+        <h1>⚔️ BATTLE ARENA</h1>
+        <p class="subtitle">2 PLAYER</p>
+
+        <div class="score-board">
+            <div class="player-info player1">
+                <h2>🔵 PLAYER 1</h2>
+                <div class="health-bar">
+                    <div id="health1"></div>
+                </div>
+                <p>HP: <span id="hp1">100</span></p>
+            </div>
+
+            <div class="timer">
+                <span id="timer">60</span>
+            </div>
+
+            <div class="player-info player2">
+                <h2>🔴 PLAYER 2</h2>
+                <div class="health-bar">
+                    <div id="health2"></div>
+                </div>
+                <p>HP: <span id="hp2">100</span></p>
+            </div>
+        </div>
+
+        <div id="arena">
+
+            <div id="player1" class="player blue">
+                <span>🔵</span>
+                <div class="name">P1</div>
+            </div>
+
+            <div id="player2" class="player red">
+                <span>🔴</span>
+                <div class="name">P2</div>
+            </div>
+
+        </div>
+
+        <div class="controls">
+
+            <div>
+                <h3>🔵 PLAYER 1</h3>
+                <p>W A S D = Gerak</p>
+                <p>F = Serang</p>
+            </div>
+
+            <div>
+                <h3>🔴 PLAYER 2</h3>
+                <p>Arrow Keys = Gerak</p>
+                <p>L = Serang</p>
+            </div>
+
+        </div>
+
+        <div id="message"></div>
+
+        <button id="restart">🔄 RESTART</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

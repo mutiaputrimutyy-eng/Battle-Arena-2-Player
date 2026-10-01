@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #111827, #1e293b);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    width: 95%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.player-info {
+    width: 35%;
+}
+
+.player-info h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.health-bar {
+    height: 20px;
+    background: #374151;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+.health-bar div {
+    height: 100%;
+    width: 100%;
+    transition: width 0.2s;
+}
+
+#health1 {
+    background: #2563eb;
+}
+
+#health2 {
+    background: #dc2626;
+}
+
+.timer {
+    font-size: 30px;
+    font-weight: bold;
+    min-width: 60px;
+}
+
+#arena {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+        #0f172a;
+    background-size: 40px 40px;
+    border: 4px solid #64748b;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.player {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    user-select: none;
+    transition: transform 0.05s;
+}
+
+.player.blue {
+    background: #2563eb;
+    box-shadow: 0 0 20px #2563eb;
+}
+
+.player.red {
+    background: #dc2626;
+    box-shadow: 0 0 20px #dc2626;
+}
+
+.name {
+    position: absolute;
+    top: -25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18px;
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.controls h3 {
+    margin-bottom: 6px;
+}
+
+.controls p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+#message {
+    min-height: 45px;
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#restart {
+    display: none;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #22c55e;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background: #16a34a;
+}
+
+.attack {
+    animation: attack 0.15s;
+}
+
+@keyframes attack {
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+.hit {
+    animation: hit 0.2s;
+}
+
+@keyframes hit {
+    50% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #arena {
+        height: 400px;
+    }
+
+    .player {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
+
+    .controls {
+        font-size: 12px;
+    }
+
+}
